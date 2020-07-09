@@ -4,6 +4,7 @@ import cv2
 import qrcode
 import numpy as np
 import random
+from PIL import Image
 from generateQR import generateQR,readQR
 
 qrfilename = os.path.join(sys.path[0],"QR.png")
@@ -13,17 +14,14 @@ decodedqrfilename = os.path.join(sys.path[0],"decodedQR.png")
 expfilename = os.path.join(sys.path[0],"exp.png")
 
 def cropDecodedQR(decodedqrfilename):
-    img = cv2.imread(decodedqrfilename)
+    image = cv2.imread(decodedqrfilename)
+    y=0
+    x=0
+    h=600
+    w=600
+    crop_image = image[x:w, y:h]
+    cv2.imshow("Cropped", crop_image)
+    cv2.waitKey(0)
+    cv2.imwrite(expfilename,image)
     
-
-    img1 = np.zeros((600, 600, 3), np.uint8)
-
-    for i in range(600):
-        for j in range(600):
-
-            img1[i][j]=img[i][j]
-
-    
-    cv2.imwrite(expfilename, img1)
-    
-cropDecodedQR(decodedqrfilename)
+#cropDecodedQR(decodedqrfilename)
