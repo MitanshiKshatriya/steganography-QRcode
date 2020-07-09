@@ -20,8 +20,8 @@ def cropDecodedQR(decodedqrfilename):
     h=600
     w=600
     crop_image = image[x:w, y:h]
-    cv2.imshow("Cropped", crop_image)
-    cv2.waitKey(0)
-    cv2.imwrite(expfilename,image)
+    #cv2.imshow("Cropped", crop_image)
+    #cv2.waitKey(0)
+    cv2.imwrite(expfilename,crop_image)
     
 #cropDecodedQR(decodedqrfilename)

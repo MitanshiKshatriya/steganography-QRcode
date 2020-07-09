@@ -31,9 +31,9 @@ def readQR(filename):
             cv2.line(img, point1, point2, color=(255, 0, 0), thickness=2)
 
         # display the result
-        cv2.imshow("img", img)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        # cv2.imshow("img", img)
+        # cv2.waitKey(0)
+        # cv2.destroyAllWindows()
 
     else:
         print("QR code not proper")
