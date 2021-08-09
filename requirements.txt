@@ -72,7 +72,7 @@ PySocks==1.7.1
 python-dateutil==2.8.1
 python-dotenv==0.13.0
 pytz==2020.1
-pywin32==228
+pywin32==301
 pywinpty==0.5.7
 pyzmq==19.0.1
 qrcode==6.1
